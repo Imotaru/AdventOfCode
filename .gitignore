@@ -129,4 +129,5 @@ dmypy.json
 .pyre/
 
 *.iml
+*.xml
 *.class
