@@ -8,5 +8,7 @@ public class Main {
 //        System.out.println(Day03.Part2());
 //        System.out.println(Day04.Part1());
 //        System.out.println(Day04.Part2());
+//        System.out.println(Day05.Part1());
+//        System.out.println(Day05.Part2());
     }
 }
