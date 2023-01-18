@@ -31,89 +31,23 @@ public class Day08 {
         for (int i = 0; i < lines.size(); i++) {
             String line = lines.get(i);
             String[] inputOutput = line.split("\\|");
-            String[] inputs = inputOutput[0].split(" ");
             String[] outputs = inputOutput[1].split(" ");
-            String[] decoded = new String[10];
-            int decodedAmount = 0;
-            while (decodedAmount < 10) {
-                for (String input : inputs) {
-                    int len = input.length();
-                    if (len == 2) {
-                        if (decoded[1] != null) {
-                            continue;
-                        }
-                        decoded[1] = input;
-                        decodedAmount++;
-                    } else if (len == 3) {
-                        if (decoded[7] != null) {
-                            continue;
-                        }
-                        decoded[7] = input;
-                        decodedAmount++;
-                    } else if (len == 4) {
-                        if (decoded[4] != null) {
-                            continue;
-                        }
-                        decoded[4] = input;
-                        decodedAmount++;
-                    } else if (len == 7) {
-                        if (decoded[8] != null) {
-                            continue;
-                        }
-                        decoded[8] = input;
-                        decodedAmount++;
-                    } else if (len == 5) {
-                        // 2, 3, 5
-                        if (decoded[3] == null && decoded[1] != null) {
-                            if (ContainsAllChars(input, decoded[1])) {
-                                decoded[3] = input;
-                                decodedAmount++;
-                            }
-                        } else if (decoded[5] == null && decoded[6] != null) {
-                            if (ContainsAllChars(decoded[6], input)) {
-                                decoded[5] = input;
-                                decodedAmount++;
-                            }
-                        } else if (decoded[2] == null && decoded[3] != null && decoded[5] != null && !input.equals(decoded[3]) && !input.equals(decoded[5])) {
-                            decoded[2] = input;
-                            decodedAmount++;
-                        }
-                    } else if (len == 6) {
-                        // 0, 6, 9
-                        if (decoded[6] == null && decoded[1] != null) {
-                            if (!ContainsAllChars(input, decoded[1])) {
-                                decoded[6] = input;
-                                decodedAmount++;
-                            }
-                        } else if (decoded[9] == null && decoded[4] != null) {
-                            if (ContainsAllChars(input, decoded[4])) {
-                                decoded[9] = input;
-                                decodedAmount++;
-                            }
-                        } else if (decoded[0] == null && decoded[6] != null && decoded[9] != null && !input.equals(decoded[6]) && !input.equals(decoded[9])) {
-                            decoded[0] = input;
-                            decodedAmount++;
-                        }
-                    }
-                }
-            }
+            String[] decoded = DecodeInput(inputOutput[0].split(" "));
 
-            // decoding is now done
-
-            String finalNumber = "";
+            StringBuilder finalNumber = new StringBuilder();
             for (String output : outputs) {
                 if (output.length() < 2) {
                     continue;
                 }
                 for (int j = 0; j < 10; j++) {
                     if (output.length() == decoded[j].length() && ContainsAllChars(output, decoded[j])) {
-                        finalNumber += j;
+                        finalNumber.append(j);
                         break;
                     }
                 }
             }
 
-            sum += Integer.parseInt(finalNumber);
+            sum += Integer.parseInt(finalNumber.toString());
         }
 
         return sum;
@@ -140,5 +74,73 @@ public class Day08 {
             }
         }
         return true;
+    }
+
+    static String[] DecodeInput(String[] inputDigits) {
+        String[] decoded = new String[10];
+        int decodedAmount = 0;
+        while (decodedAmount < 10) {
+            for (String input : inputDigits) {
+                int len = input.length();
+                if (len == 2) {
+                    if (decoded[1] != null) {
+                        continue;
+                    }
+                    decoded[1] = input;
+                    decodedAmount++;
+                } else if (len == 3) {
+                    if (decoded[7] != null) {
+                        continue;
+                    }
+                    decoded[7] = input;
+                    decodedAmount++;
+                } else if (len == 4) {
+                    if (decoded[4] != null) {
+                        continue;
+                    }
+                    decoded[4] = input;
+                    decodedAmount++;
+                } else if (len == 7) {
+                    if (decoded[8] != null) {
+                        continue;
+                    }
+                    decoded[8] = input;
+                    decodedAmount++;
+                } else if (len == 5) {
+                    // 2, 3, 5
+                    if (decoded[3] == null && decoded[1] != null) {
+                        if (ContainsAllChars(input, decoded[1])) {
+                            decoded[3] = input;
+                            decodedAmount++;
+                        }
+                    } else if (decoded[5] == null && decoded[6] != null) {
+                        if (ContainsAllChars(decoded[6], input)) {
+                            decoded[5] = input;
+                            decodedAmount++;
+                        }
+                    } else if (decoded[2] == null && decoded[3] != null && decoded[5] != null && !input.equals(decoded[3]) && !input.equals(decoded[5])) {
+                        decoded[2] = input;
+                        decodedAmount++;
+                    }
+                } else if (len == 6) {
+                    // 0, 6, 9
+                    if (decoded[6] == null && decoded[1] != null) {
+                        if (!ContainsAllChars(input, decoded[1])) {
+                            decoded[6] = input;
+                            decodedAmount++;
+                        }
+                    } else if (decoded[9] == null && decoded[4] != null) {
+                        if (ContainsAllChars(input, decoded[4])) {
+                            decoded[9] = input;
+                            decodedAmount++;
+                        }
+                    } else if (decoded[0] == null && decoded[6] != null && decoded[9] != null && !input.equals(decoded[6]) && !input.equals(decoded[9])) {
+                        decoded[0] = input;
+                        decodedAmount++;
+                    }
+                }
+            }
+        }
+        return decoded;
     }
 }
