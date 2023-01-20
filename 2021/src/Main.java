@@ -22,5 +22,7 @@ public class Main {
 //        System.out.println(Day10.Part2());
 //        System.out.println(Day11.Part1());
 //        System.out.println(Day11.Part2());
+//        System.out.println(Day12.Part1());
+//        System.out.println(Day12.Part2());
     }
 }
