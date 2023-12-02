@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 
 namespace AdventOfCode2023 {
     public static class Day01 {
