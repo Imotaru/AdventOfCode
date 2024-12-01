@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "wA2Ub4XI++It0YLABIoOg4CD8ufG/sRAWgs44kxtLshpqm1sr1ZRFzIiTZrCKBZpoLZadoPzo8Mm9mv6P9I3BA==",
+  "dgSpecHash": "18EhHZ088UQ=",
   "success": true,
-  "projectFilePath": "C:\\AdventOfCode\\2023\\AdventOfCode2023.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\brian\\AdventOfCode\\2023\\AdventOfCode2023.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\brian\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\brian\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\brian\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\brian\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
+  ],
   "logs": []
 }

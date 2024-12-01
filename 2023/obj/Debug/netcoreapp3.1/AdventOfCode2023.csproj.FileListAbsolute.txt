@@ -24,3 +24,17 @@ C:\AdventOfCode\2023\obj\Debug\netcoreapp3.1\AdventOfCode2023.csproj.CoreCompile
 C:\AdventOfCode\2023\obj\Debug\netcoreapp3.1\AdventOfCode2023.dll
 C:\AdventOfCode\2023\obj\Debug\netcoreapp3.1\AdventOfCode2023.pdb
 C:\AdventOfCode\2023\obj\Debug\netcoreapp3.1\AdventOfCode2023.genruntimeconfig.cache
+C:\Users\brian\AdventOfCode\2023\bin\Debug\netcoreapp3.1\AdventOfCode2023.exe
+C:\Users\brian\AdventOfCode\2023\bin\Debug\netcoreapp3.1\AdventOfCode2023.deps.json
+C:\Users\brian\AdventOfCode\2023\bin\Debug\netcoreapp3.1\AdventOfCode2023.runtimeconfig.json
+C:\Users\brian\AdventOfCode\2023\bin\Debug\netcoreapp3.1\AdventOfCode2023.runtimeconfig.dev.json
+C:\Users\brian\AdventOfCode\2023\bin\Debug\netcoreapp3.1\AdventOfCode2023.dll
+C:\Users\brian\AdventOfCode\2023\bin\Debug\netcoreapp3.1\AdventOfCode2023.pdb
+C:\Users\brian\AdventOfCode\2023\obj\Debug\netcoreapp3.1\AdventOfCode2023.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\brian\AdventOfCode\2023\obj\Debug\netcoreapp3.1\AdventOfCode2023.AssemblyInfoInputs.cache
+C:\Users\brian\AdventOfCode\2023\obj\Debug\netcoreapp3.1\AdventOfCode2023.AssemblyInfo.cs
+C:\Users\brian\AdventOfCode\2023\obj\Debug\netcoreapp3.1\AdventOfCode2023.csproj.CoreCompileInputs.cache
+C:\Users\brian\AdventOfCode\2023\obj\Debug\netcoreapp3.1\AdventOfCode2023.sourcelink.json
+C:\Users\brian\AdventOfCode\2023\obj\Debug\netcoreapp3.1\AdventOfCode2023.dll
+C:\Users\brian\AdventOfCode\2023\obj\Debug\netcoreapp3.1\AdventOfCode2023.pdb
+C:\Users\brian\AdventOfCode\2023\obj\Debug\netcoreapp3.1\AdventOfCode2023.genruntimeconfig.cache
