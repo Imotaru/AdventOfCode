@@ -23,13 +23,16 @@ for i in range(len(left_arr)):
 print(diff)
 
 similarity = 0
+last_r = 0
 
 for l in left_arr:
-	for r in right_arr:
+	for i in range(last_r, len(right_arr)):
+		r = right_arr[i]
 		if r == l:
 			similarity += l
 		elif r > l:
-			# since the lists are sorted we can break once r > l
 			break
+		last_r += 1
 
+# part 2 solution
 print(similarity)
