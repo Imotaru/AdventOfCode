@@ -11,6 +11,7 @@ def is_report_safe(report, is_part_two: bool, is_skipped_level: bool):
 	is_all_decreasing = True
 	min_gap = 2_140_000_000
 	max_gap = -1
+	fail_index = -1
 
 	for i in range(len(report) - 1):
 		gap = abs(report[i] - report[i + 1])
@@ -22,12 +23,18 @@ def is_report_safe(report, is_part_two: bool, is_skipped_level: bool):
 			is_all_decreasing = False
 		elif report[i] > report[i + 1]:
 			is_all_increasing = False
+		if not (is_all_increasing or is_all_decreasing) or min_gap < 1 or max_gap > 3:
+			if not is_part_two:
+				return False
+			else:
+				fail_index = i
+				break
 
-	if (is_all_increasing or is_all_decreasing) and min_gap >= 1 and max_gap <= 3:
+	if not is_part_two or fail_index == -1:
 		return True
 
 	if is_part_two and not is_skipped_level:
-		for i in range(len(report)):
+		for i in range(max(fail_index - 1, 0), fail_index + 2):
 			skipped_level_report = []
 			for j in range(len(report)):
 				if j != i:
