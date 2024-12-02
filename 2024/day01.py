@@ -1,4 +1,7 @@
 import re
+import time
+
+start_time = time.time()
 
 # f = open("day01testinput.txt", "r")
 f = open("day01input.txt", "r")
@@ -36,3 +39,7 @@ for l in left_arr:
 
 # part 2 solution
 print(similarity)
+
+end_time = time.time()
+elapsed_time = end_time - start_time
+print(f"Elapsed time: {elapsed_time:.4f} seconds")
